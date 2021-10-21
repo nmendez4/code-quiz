@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: gainsboro;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10 10 0 10;
+    height: 50px;
+    font-size: 1.7vw;
+    color: goldenrod;
+    text-decoration-color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.btnHeader {
+    border: 0;
+    border-radius: 10px;
+    color: chocolate;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.btnHeader:hover {
+    background-color: goldenrod;
+    text-decoration-color: black;
+}
+
