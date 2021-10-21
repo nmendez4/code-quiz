@@ -1,46 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <title>Coding Quiz!</title>
-    <link rel="stylesheet" href="./assets/stlye.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/stlye.css" />
+    <title>Coding Quiz</title>
+  </head>
 
-<!-- header section & title -->
-<header>Coding Quiz!
-    <div>
-        <!-- scoring log -->
-        <button class="btnHeader" id="scores">Score Log</button>
+  <body>
+    <!-- quiz elements -->
+    <div id="wrapper">
+      <div>
+        <!-- timer -->
+        <div id="currentTime"></div>
+        <!-- quiz Content -->
+        <div id="questionsSec">
+          <h1>Coding Quiz Challenge!</h1>
+          <hr id="titleline" />
+          <p>
+            Welcome to the coding quiz! You'll be allowed 100 seconds to complete 5 questions randomly selected using information from Modules 1-4, best of luck!
+          </p>
+          <ul id="choicesUl"></ul>
+        </div>
+      </div>
+
+      <!-- start quiz -->
+      <div>
+        <button id="startTime">Start Quiz</button>
+      </div>
+
+      <div>
+        <!-- link to highscores (not working at the moment for some reason!!!) -->
+        <a href="highscores.html" alt="Current Highscores" id="viewhighs"
+          >HIGHSCORES</a
+        >
+      </div>
     </div>
-    <div>
-        <p>
-            <span id="timeLeft">xxx</span>
-        </p>
-    </div>
-</header>
-
-<body>
-   <div class="main">
-       <div class="grid">
-           <p id="questions"></p>
-           <p id="score"></p>
-           <p id="initials"></p>
-           <textarea name="" id="initialsArea" cols="2" rows="10"></textarea>
-           <button class="btn" id="start">Start Quiz</button>
-           <button class="btn" id="answer1"></button>
-           <button class="btn" id="answer2"></button>
-           <button class="btn" id="answer3"></button>
-           <button class="btn" id="answer4"></button>
-           <button class="btn" id="submit"></button>
-       </div>
-       <div id="correctWrongContainer">
-           <p id="correctWrong"></p>
-       </div>
-   </div>
-
-    
-    <script src="./assets/script.js"></script>
-</body>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
