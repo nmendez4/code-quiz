@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="./assets/css/stlye.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     <title>Coding Quiz</title>
   </head>
 
@@ -20,24 +20,34 @@
           <h1>Coding Quiz Challenge!</h1>
           <hr id="titleline" />
           <p>
-            Welcome to the coding quiz! You'll be allowed 100 seconds to complete 5 questions randomly selected using information from Modules 1-4, best of luck!
+            Welcome to the coding quiz! You'll be allowed 100 seconds to complete 5 questions randomly selected using information from modules 1-4. For every wrong answer, the timer will subtract 10 seconds. Your final score will be displayed at the end, best of luck!
           </p>
-          <ul id="choicesUl"></ul>
+          <ul id="choicesUl">
+              <li></li>
+          </ul>
         </div>
       </div>
 
       <!-- start quiz -->
-      <div>
+      <div id="start">
         <button id="startTime">Start Quiz</button>
       </div>
 
       <div>
-        <!-- link to highscores (not working at the moment for some reason!!!) -->
-        <a href="highscores.html" alt="Current Highscores" id="viewhighs"
+        <!-- link to highscores -->
+        <a href="./highscores.html" alt="Current Highscores" id="viewhighs"
           >HIGHSCORES</a
         >
       </div>
     </div>
+
+    <footer class="footer">
+        <div class="info">
+            <h2>Made by Nicholas Mendez</h2>
+            <p>Web APIs Challenge: Coding Quiz</p>
+            <p>&copy; Nicholas E. Mendez 2021</p>
+        </div>
+    </footer>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

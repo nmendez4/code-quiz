@@ -4,61 +4,62 @@ var questions = [
       question:
         "How would you add a .js file to an HTML file?",
       choices: [
-       "add via <link> in <head>",
-       "add via <div> in <section>",
-       "add via <script> in the <body>",
-       "add by dragging and dropping",
+       A = "Add via <link> in <head> ",
+       B = "Add via <div> in <section> ",
+       C = "Add via <script> in the <body> ",
+       D = "Add by dragging and dropping",
       ],
       // answer: C
-      answer: "add via <script> in the <body>",
+      answer: "Add via <script> in the <body> ",
     },
     {
       question:
         "What company created and open-sourced 'Bootstrap'?",
       choices: [
-        "IBM",
-        "Twitter",
-        "Microsoft",
-        "Apple",
+        A = "IBM ",
+        B = "Twitter ",
+        C = "Microsoft ",
+        D = "Apple",
       ],
       // answer: B
-      answer: "Twitter",
+      answer: "Twitter ",
     },
     {
       question: "What CSS element is know as the 'universal selector'?",
       choices: [
-        "* aka the asterisk",
-        "# aka the pound sign or hashtag",
-        "& aka the ampersand",
-        "$ aka the money sign or dollar sign",
+        A = "* aka the asterisk ",
+        B = "# aka the pound sign or hashtag ",
+        C = "& aka the ampersand ",
+        D = "$ aka the money sign or dollar sign",
       ],
       // answer: A
       answer:
-        "* aka the asterisk",
+        "* aka the asterisk ",
     },
     {
       question: "What does the acronym 'CDN' stand for?",
       choices: [
-        "Control Directory Number",
-        "Connect Direct Network",
-        "Content Delivery Network",
-        "Canadian Dairy Network",
+        A = "Control Directory Number ",
+        B = "Connect Direct Network ",
+        C = "Content Delivery Network ",
+        D = "Canadian Dairy Network",
       ],
       // answer: C
-      answer: "Content Delivery Network",
+      answer: "Content Delivery Network ",
     },
     {
       question: "How many columns does 'Bootstrap' allow across a webpage?",
       choices: [
-        "20 columns",
-        "10 columns",
-        "15 columns",
-        "12 columns",
+        A = "20 columns ",
+        B = "10 columns ",
+        C = "15 columns ",
+        D = "12 columns",
       ],
       // answer: D
       answer: "12 columns",
     },
 ];
+
   // declared variables
   var score = 0;
   var questionIndex = 0;
@@ -100,10 +101,12 @@ var questions = [
     // Clears existing data
     questionsSec.innerHTML = "";
     ulCreate.innerHTML = "";
+
+    // for loop
     for (var i = 0; i < questions.length; i++) {
       // Appends question question only
       var userQuestion = questions[questionIndex].question;
-      var userChoices = questions[questionIndex].answer;
+      var userChoices = questions[questionIndex].choices;
       questionsSec.textContent = userQuestion;
     }
     userChoices.forEach(function (newItem) {
@@ -133,6 +136,7 @@ var questions = [
           "Wrong! The correct answer was:  " + questions[questionIndex].answer;
       }
     }
+
     questionIndex++;
   
     if (questionIndex >= questions.length) {
@@ -163,7 +167,7 @@ var questions = [
     questionsSec.appendChild(createH1);
   
     var createQuestionLine = document.createElement("hr");
-    createquestionLine.setAttribute("id", "questionline");
+    createQuestionLine.setAttribute("id", "questionline");
   
     questionsSec.appendChild(createQuestionLine);
   
@@ -178,6 +182,8 @@ var questions = [
       var createP2 = document.createElement("p");
       clearInterval(holdInterval);
       var calcScore = parseInt(timeRemaining) * parseInt(score);
+      console.log(typeof timeRemaining);
+      console.log(typeof score);
       createP.textContent = "Your final score is: " + calcScore;
   
       questionsSec.appendChild(createP2);
@@ -203,7 +209,7 @@ var questions = [
     // clear the current placeholder
     createInput.setAttribute(
       "onfocus",
-      "if (this.value == ':>') {this.value = '';}"
+      "if (this.value == ':>)' {this.value = 'NEM';}"
     );
   
     createInput.textContent = "";
@@ -221,6 +227,7 @@ var questions = [
     // event listener for initials & local storage for initials and score
     createSubmit.addEventListener("click", function () {
       var initials = createInput.value;
+
       if (initials === null) {
         console.log("No value entered!");
       } else {
@@ -228,7 +235,8 @@ var questions = [
           initials: initials,
           score: calcScore,
         };
-        // adds current quiz taker's score to local list
+        console.log(finalScore);
+        // adds current quiz taker's score to local storage
         var allScores = localStorage.getItem("allScores");
         if (allScores === null) {
           allScores = [];
@@ -238,6 +246,7 @@ var questions = [
         allScores.push(finalScore);
         var newScore = JSON.stringify(allScores);
         localStorage.setItem("allScores", newScore);
+
         window.location.replace("./highscores.html");
       }
     });
