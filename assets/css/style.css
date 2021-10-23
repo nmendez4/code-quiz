@@ -57,9 +57,9 @@ div #questionsSec ul {
 }
 
 div #questionsSec li {
-    display:table-row;
+    display:table-column table-row;
     justify-content: space-evenly;
-    grid-row: inherit;
+    grid-column: auto;
 }
 
 #start button {

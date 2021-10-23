@@ -4,59 +4,59 @@ var questions = [
       question:
         "How would you add a .js file to an HTML file?",
       choices: [
-       A = "Add via <link> in <head> ",
-       B = "Add via <div> in <section> ",
-       C = "Add via <script> in the <body> ",
-       D = "Add by dragging and dropping",
+       A = "A: Add via <link> in <head> ",
+       B = "B: Add via <div> in <section> ",
+       C = "C: Add via <script> in the <body> ",
+       D = "D: Add by dragging and dropping",
       ],
       // answer: C
-      answer: "Add via <script> in the <body> ",
+      answer: "C: Add via <script> in the <body> ",
     },
     {
       question:
         "What company created and open-sourced 'Bootstrap'?",
       choices: [
-        A = "IBM ",
-        B = "Twitter ",
-        C = "Microsoft ",
-        D = "Apple",
+        A = "A: IBM ",
+        B = "B: Twitter ",
+        C = "C: Microsoft ",
+        D = "D: Apple",
       ],
       // answer: B
-      answer: "Twitter ",
+      answer: "B: Twitter ",
     },
     {
       question: "What CSS element is know as the 'universal selector'?",
       choices: [
-        A = "* aka the asterisk ",
-        B = "# aka the pound sign or hashtag ",
-        C = "& aka the ampersand ",
-        D = "$ aka the money sign or dollar sign",
+        A = "A: * aka the asterisk ",
+        B = "B: # aka the pound sign or hashtag ",
+        C = "C: & aka the ampersand ",
+        D = "D: $ aka the money sign or dollar sign",
       ],
       // answer: A
       answer:
-        "* aka the asterisk ",
+        "A: * aka the asterisk ",
     },
     {
       question: "What does the acronym 'CDN' stand for?",
       choices: [
-        A = "Control Directory Number ",
-        B = "Connect Direct Network ",
-        C = "Content Delivery Network ",
-        D = "Canadian Dairy Network",
+        A = "A: Control Directory Number ",
+        B = "B: Connect Direct Network ",
+        C = "C: Content Delivery Network ",
+        D = "D: Canadian Dairy Network",
       ],
       // answer: C
-      answer: "Content Delivery Network ",
+      answer: "C: Content Delivery Network ",
     },
     {
       question: "How many columns does 'Bootstrap' allow across a webpage?",
       choices: [
-        A = "20 columns ",
-        B = "10 columns ",
-        C = "15 columns ",
-        D = "12 columns",
+        A = "A: 20 columns ",
+        B = "B: 10 columns ",
+        C = "C: 15 columns ",
+        D = "D: 12 columns",
       ],
       // answer: D
-      answer: "12 columns",
+      answer: "D: 12 columns",
     },
 ];
 
@@ -66,7 +66,6 @@ var questions = [
   var currentTime = document.querySelector("#currentTime");
   var timer = document.querySelector("#startTime");
   var questionsSec = document.querySelector("#questionsSec");
-  var wrapper = document.querySelector("#wrapper");
   var secondsLeft = 100;
   // interval time
   var holdInterval = 0;
